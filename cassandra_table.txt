@@ -1,0 +1,34 @@
+sudo systemctl start cassandra
+
+sudo systemctl status cassandra
+
+sudo systemctl stop cassandra
+
+
+cqlsh
+
+
+
+CREATE KEYSPACE trans_ks WITH replication = {'class': 'SimpleStrategy', 'replication_factor' : 1};
+
+CREATE TABLE trans_ks.trans_message_detail_tbl (user_id TEXT PRIMARY KEY, first_name TEXT, last_name TEXT, gender TEXT, city TEXT, state TEXT, zip TEXT, email TEXT, nationality TEXT, tran_card_type TEXT, tran_date TEXT, product_id TEXT, tran_amount DOUBLE);
+
+
+sudo vi /etc/cassandra/conf/cassandra.yaml
+
+#rpc_address: localhost
+rpc_address: 10.128.0.5
+
+sudo systemctl restart cassandra
+
+
+sudo netstat -tulpn | grep 9042
+
+
+https://mvnrepository.com/artifact/com.twitter/jsr166e/1.1.0
+
+jsr166e-1.1.0.jar
+
+https://mvnrepository.com/artifact/datastax/spark-cassandra-connector/2.4.0-s_2.11
+
+spark-cassandra-connector-2.4.0-s_2.11.jar
