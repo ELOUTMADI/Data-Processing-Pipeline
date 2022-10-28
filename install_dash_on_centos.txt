@@ -1,0 +1,30 @@
+Installation Steps for Python package "Dash":
+=============================================
+
+sudo yum install epel-release
+
+sudo yum install python-pip
+
+pip --version
+
+sudo yum install python-devel
+
+sudo yum groupinstall 'development tools'
+
+
+sudo python -m pip install -U pip
+
+sudo pip install --upgrade setuptools
+
+
+sudo pip install dash dash-renderer dash-html-components dash-core-components plotly
+
+sudo pip install pymongo
+
+sudo yum install python-pandas
+
+
+spark-submit --master yarn --deploy-mode client --jars mongo-java-driver-3.11.0.jar,mongo-spark-connector_2.11-2.4.1.jar,commons-configuration-1.10.jar,jsr166e-1.1.0.jar,spark-cassandra-connector-2.4.0-s_2.11.jar,spark-sql-kafka-0-10_2.11-2.4.0.jar,kafka-clients-1.1.0.jar --conf spark.executor.extraClassPath=mongo-java-driver-3.11.0.jar:mongo-spark-connector_2.11-2.4.1.jar:commons-configuration-1.10.jar:jsr166e-1.1.0.jar:spark-cassandra-connector-2.4.0-s_2.11.jar:spark-sql-kafka-0-10_2.11-2.4.0.jar:kafka-clients-1.1.0.jar --conf spark.executor.extraLibrary=mongo-java-driver-3.11.0.jar:mongo-spark-connector_2.11-2.4.1.jar:commons-configuration-1.10.jar:jsr166e-1.1.0.jar:spark-cassandra-connector-2.4.0-s_2.11.jar:spark-sql-kafka-0-10_2.11-2.4.0.jar:kafka-clients-1.1.0.jar --conf spark.driver.extraClassPath=mongo-java-driver-3.11.0.jar:mongo-spark-connector_2.11-2.4.1.jar:commons-configuration-1.10.jar:jsr166e-1.1.0.jar:spark-cassandra-connector-2.4.0-s_2.11.jar:spark-sql-kafka-0-10_2.11-2.4.0.jar:kafka-clients-1.1.0.jar --class com.ae.real_time_data_pipeline datamaking_real_time_data_pipeline_2.11-1.0.jar
+
+
+
