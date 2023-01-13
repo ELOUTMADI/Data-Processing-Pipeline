@@ -26,7 +26,7 @@ Apache Hadoop is used to store the necessary Jar files to run the code on Cloude
 - Apache Hadoop is used to store some Jar files to be able to run the code in Cloudera.
 
 
-# Real-Time Data Pipeline
+## Real-Time Data Pipeline
 
 This code is a Real-Time Data Pipeline that **reads data** from a Kafka topic, processes it, and then stores it in a Cassandra and MongoDB cluster. 
 
